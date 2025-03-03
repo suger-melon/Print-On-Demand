@@ -20,6 +20,7 @@ import smartWatch from './../../assets/category/watch.svg'
 import camera from './../../assets/category/camera.svg'
 import headphone from './../../assets/category/headphone.svg'
 import gaming from './../../assets/category/gaming.svg'
+import jbl from './../../assets/jbl.png'
 
 const Home = () => {
     return (
@@ -185,7 +186,28 @@ const Home = () => {
                                 <p className="mb-0">Gaming</p>
                             </div>
                         </div>
+                        <hr />
+                    </div>
 
+                    <div className="this-month">
+                        <div className="status">
+                            <div className="mark"></div>
+                            <h6 className="status-text mb-0">This Month</h6>
+                        </div>
+
+                        <div className="category-title d-flex justify-content-between">
+                            <h2>Best Selling Products</h2>
+                            <button className="this-month-view-all">View All</button>
+                        </div>
+
+                        <div className="d-flex gap-5 justify-content-center flex-wrap">
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                        </div>
                     </div>
     
                 </div>
