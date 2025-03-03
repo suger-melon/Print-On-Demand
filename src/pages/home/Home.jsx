@@ -132,7 +132,7 @@ const Home = () => {
                             <SaleProduct />
                             <SaleProduct />
                             <SaleProduct />
-                            <SaleProduct />
+                            {/* <SaleProduct /> */}
                         </div>
 
                         <div>
@@ -206,9 +206,83 @@ const Home = () => {
                             <SaleProduct />
                             <SaleProduct />
                             <SaleProduct />
-                            <SaleProduct />
+                            {/* <SaleProduct /> */}
                         </div>
                     </div>
+
+                    <div className="flex-banner">
+                        <div className="row h-100 align-items-center">
+                            <div className="col-md-6 left-content">
+                                <div className="text-content">
+                                    <div className="title-category">
+                                        Categories
+                                    </div>
+                                    <div className="title-content fs-1">
+                                        Enhance Your Music Experience
+                                    </div>
+                                    <div className="countdown">
+                                        <div className="countdown-item">
+                                            <div className="fw-bold fs-5 countdown-fonts">23</div>
+                                            <small>Hours</small>
+                                        </div>
+                                        <div className="countdown-item">
+                                            <div className="fw-bold fs-5 countdown-fonts">05</div>
+                                            <small>Days</small>
+                                        </div>
+                                        <div className="countdown-item">
+                                            <div className="fw-bold fs-5 countdown-fonts">59</div>
+                                            <small>Minutes</small>
+                                        </div>
+                                        <div className="countdown-item">
+                                            <div className="fw-bold fs-5 countdown-fonts">35</div>
+                                            <small>Seconds</small>
+                                        </div>
+                                    </div>
+
+                                    <button className="buy-now">Buy Now!</button>
+                                </div>
+                            </div>
+                            <div className="col-md-6 right-content py-2">
+                                <img src={jbl} alt="speaker" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="best-selling-product">
+                        <div className="status">
+                            <div className="mark"></div>
+                            <h6 className="status-text mb-0">Our Products</h6>
+                        </div> 
+                        
+                        <div className="category-title d-flex justify-content-between">
+                            <h2>Explore Our Products</h2>
+                            <span>
+                                <span className="d-flex gap-2">
+                                    <span className="arrow-parent">
+                                        <img src={singleLeftArrow} alt="left arrow" />
+                                    </span>
+                                    <span className="arrow-parent">
+                                        <img src={singleRightArrow} alt="right arrow" />
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+
+                        <div className="d-flex gap-5 justify-content-center flex-wrap">
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                            <SaleProduct />
+                            {/* <SaleProduct /> */}
+                        </div>
+
+                        <div className="d-flex justify-content-center">
+                            <button className="after-sale-product">View All Products</button>
+                        </div>
+                    </div>
+                    
     
                 </div>
             </div>
