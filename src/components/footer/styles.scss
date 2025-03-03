@@ -1,0 +1,53 @@
+@import './../../styles/variables';
+
+.footer {
+    // height: 440px;
+    background-color: $footer-background;
+    color: $footer-font;
+
+    .first-line {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: large;
+    }
+
+    .subscribe{
+        font-weight: 500;
+        font-size: medium;
+        margin-bottom: 20px;
+    }
+
+    .footer-search {
+        width: 195px;
+        height: 40px;
+        background-color: $footer-background;
+        color: $footer-font;
+        border: 1px solid $footer-font;
+        border-radius: 5px;
+    }
+
+    @media (min-width: 768px) {
+        input {
+            margin-left: 70px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        input {
+            margin-left: 0;
+        }
+    }
+
+    .footer-search::placeholder {
+        padding-left: 5px;
+    }
+
+    .rightArrow {
+        transform: translateX(-35px);
+    }
+
+    input:focus {
+        outline: none;
+    }
+}

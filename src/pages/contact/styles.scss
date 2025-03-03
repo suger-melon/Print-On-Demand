@@ -1,0 +1,30 @@
+.contact {
+    margin-bottom: 100px;
+
+    .container {
+        .path-top {
+            margin-top: 50px;
+            margin-bottom: 75px;
+        }
+    
+        .path {
+            color: #7f7f7f;
+        }
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #db4544;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 25px;
+    }
+
+    .form-control {
+        border: none;
+        background-color: #f5f5f5;
+    }
+}
