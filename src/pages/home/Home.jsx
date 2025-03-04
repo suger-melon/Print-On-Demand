@@ -21,6 +21,14 @@ import camera from './../../assets/category/camera.svg'
 import headphone from './../../assets/category/headphone.svg'
 import gaming from './../../assets/category/gaming.svg'
 import jbl from './../../assets/jbl.png'
+import ps5Image from './../../assets/arrival/ps5.png'
+import women from './../../assets/arrival/women.png'
+import amazonEcho from './../../assets/arrival/amazon-echo.png'
+import perfume from './../../assets/arrival/perfume.png'
+import delivery from './../../assets/delivery.svg'
+import headphoneLast from './../../assets/headphone.svg'
+import garuntee from './../../assets/security.svg'
+import upArrow from './../../assets/up-arrow.svg'
 
 const Home = () => {
     return (
@@ -255,8 +263,8 @@ const Home = () => {
                             <h6 className="status-text mb-0">Our Products</h6>
                         </div> 
                         
-                        <div className="category-title d-flex justify-content-between">
-                            <h2>Explore Our Products</h2>
+                        <div className="category-title d-flex justify-content-between align-items-center">
+                            <h2 className="mb-0">Explore Our Products</h2>
                             <span>
                                 <span className="d-flex gap-2">
                                     <span className="arrow-parent">
@@ -282,8 +290,93 @@ const Home = () => {
                             <button className="after-sale-product">View All Products</button>
                         </div>
                     </div>
-                    
-    
+
+
+                    <div className="new-arrival">
+                        <div className="status">
+                            <div className="mark"></div>
+                            <h6 className="status-text mb-0">Featured</h6>
+                        </div> 
+                            
+                        <div className="category-title d-flex justify-content-between">
+                            <h2>New Arrival</h2>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-md-6 left m-0" style={{ backgroundImage: `url(${ps5Image})`}}>
+                                <div className="content-wrapper">
+                                    <div className="content">
+                                        <h4 className="title">PlayStation 5</h4>
+                                        <div className="text">Black and White version of the PS5 <br /> coming out on sale.</div>
+                                        <div className="link">Shop Now</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 right m-0">
+                                <div className="col-md-12">
+                                    <div className="grid-item item1" style={{ backgroundImage: `url(${women})`}}>
+                                        <div className="content-wrapper">
+                                            <div className="content">
+                                                <h4 className="title">Women’s Collections</h4>
+                                                <div className="text">Featured woman collections that <br /> give you another vibe.</div>
+                                                <div className="link">Shop Now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row p-3 pb-0 justify-content-between">
+                                    <div className="col-md-6 speaker mt-0" style={{ backgroundImage: `url(${amazonEcho})`}}>
+                                        <div className="content-wrapper">
+                                            <div className="content">
+                                                <h4 className="title">Speakers</h4>
+                                                <div className="text">Amazon wireless speakers</div>
+                                                <div className="link">Shop Now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 perfume mt-0" style={{ backgroundImage: `url(${perfume})`}}>
+                                        <div className="content-wrapper">
+                                            <div className="content">
+                                                <h4 className="title">Perfume</h4>
+                                                <div className="text">GUCCI INTENSE OUD EDP</div>
+                                                <div className="link">Shop Now</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                          
+                    </div>       
+
+                    <div className="bottom-icons">
+                        <div className="delivery">
+                            <div className="icon">
+                                <img src={delivery} alt="delivery" />
+                            </div>
+                            <div className="title-tag">FREE AND FAST DELIVERY</div>
+                            <div className="desc">Free delivery for all orders over $140</div>
+                        </div>
+
+                        <div className="service">
+                            <div className="icon">
+                                <img src={headphoneLast} alt="headphone" />
+                            </div>
+                            <div className="title-tag">24/7 CUSTOMER SERVICE</div>
+                            <div className="desc">Friendly 24/7 customer support</div>
+                        </div>
+
+                        <div className="gurantee">
+                            <div className="icon">
+                                <img src={garuntee} alt="garuntee" />
+                            </div>
+                            <div className="title-tag">MONEY BACK GUARANTEE</div>
+                            <div className="desc">We reurn money within 30 days</div>
+                        </div>
+                    </div>
+
+                    <div className="up-arrow">
+                        <img src={upArrow} alt="up arrow" height={25} width={25} />
+                    </div>
                 </div>
             </div>
             <Footer />
