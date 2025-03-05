@@ -9,13 +9,28 @@ import fullStar from './../../assets/full-star.svg'
 import halfStart from './../../assets/half-star.svg'
 import emptyStart from './../../assets/empty-star.svg'
 
-const BestSellingProduct = () => {
+const BestSellingProduct = ({ product }) => {
+    const { name, image, price, originalPrice, discount, rating, reviews } = product
+
+    const renderStar = (rating) => {
+        const star = []
+        const fullStars = Math.floor(rating)
+        const hasHalfStar = rating % 1 !== 0
+        const emptyStar = 5 - fullStars - (hasHalfStar? 1: 0)
+
+        for(let i=0; i<fullStars; i++) star.push(<img key={i} src={fullStar} alt="star" />)
+        if(hasHalfStar) star.push(<img key="half" src={halfStart} alt="star" />)
+        for(let i=0; i<emptyStar; i++) star.push(<img key={`empty-${i}`} src={emptyStart} alt="star" />)
+
+        return star
+    }
+
     return(
             <>
                 <div className="BestSellingProduct">
                     <div className="BestSellingProduct-image">
                         <div className="sproduct">
-                            <img src={bsproduct1} alt="game controller" />
+                            <img src={image} alt="game controller" />
                         </div>
                         <div className="w-100 d-flex justify-content-end">
                             <div className="image-icon-parent">
@@ -29,19 +44,17 @@ const BestSellingProduct = () => {
                         </div>
                     </div>
                     <div className="BestSellingProduct-text">
-                        <h5 className="mt-2">The north coat</h5>
+                        <h5 className="mt-2">{name}</h5>
                         <p className="mb-2">
-                            <span className="actual-price">$260</span>
-                            <span className="text-secondary text-decoration-line-through">$360</span>
+                            <span className="actual-price">${price}</span>
+                            <span className="text-secondary text-decoration-line-through">${originalPrice}</span>
                         </p>
                         
                         <div>
-                            <img src={fullStar} alt="star" />
-                            <img src={fullStar} alt="star" />
-                            <img src={fullStar} alt="star" />
-                            <img src={fullStar} alt="star" />
-                            <img src={fullStar} alt="star" />
-                            <span className="ms-2 text-secondary">(65)</span>
+                            {
+                                renderStar(rating)
+                            }
+                            <span className="ms-2 text-secondary">({reviews})</span>
                         </div>
                         
                     </div>

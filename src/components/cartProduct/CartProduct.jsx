@@ -9,20 +9,22 @@ import fullStar from './../../assets/full-star.svg'
 import halfStart from './../../assets/half-star.svg'
 import emptyStart from './../../assets/empty-star.svg'
 
-const CartProduct = () => {
+const CartProduct = ({ product }) => {
+    const { name, image, price, originalPrice, discount, rating, reviews } = product
+
     return(
             <>
                 <div className="CartProduct">
                     <div className="CartProduct-image">
                         <div>
                             <div className="sproduct">
-                                <img src={bsproduct2} alt="game controller" />
+                                <img src={image} alt="game controller" />
                             </div>
                         </div>
                         <div className="d-flex flex-column justify-content-end image-content">
                             <div className="d-flex justify-content-between h-100 p-2">
                                 <div className="percentage">
-                                    - 35%
+                                    {discount}%
                                 </div>
                                 <div className="image-icon-parent">
                                     <div className="image-icon">
@@ -37,10 +39,10 @@ const CartProduct = () => {
                         </div>
                     </div>
                     <div className="CartProduct-text">
-                        <h5 className="mt-2">Gucci duffle bag</h5>
+                        <h5 className="mt-2">{name}</h5>
                         <p className="mb-2">
-                            <span className="actual-price">$960</span>
-                            <span className="text-secondary text-decoration-line-through">$1160</span>
+                            <span className="actual-price">${price}</span>
+                            <span className="text-secondary text-decoration-line-through">${originalPrice}</span>
                         </p>
                          
                     </div>

@@ -6,6 +6,7 @@ import NavbarHome from "../../components/navbarHome/navbarHome";
 import Footer from "../../components/footer/Footer";
 import SaleProduct from "../../components/saleProduct/SaleProduct";
 // import CartProduct from "../../components/cartProduct/CartProduct";
+import {FlashSalesProduct, BestSellingProductsProducts, ExploreOurProductsProducts} from './../../components/product/Product'
 
 // Assets import
 import rightArrow from "./../../assets/mini-right-arrow.svg";
@@ -135,12 +136,7 @@ const Home = () => {
                         </div>    
 
                         <div className="d-flex gap-5 justify-content-center flex-wrap sale-product-que">
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            {/* <SaleProduct /> */}
+                            <FlashSalesProduct />
                         </div>
 
                         <div>
@@ -209,12 +205,7 @@ const Home = () => {
                         </div>
 
                         <div className="d-flex gap-5 justify-content-center flex-wrap">
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            {/* <SaleProduct /> */}
+                            <ExploreOurProductsProducts />
                         </div>
                     </div>
 
@@ -278,12 +269,7 @@ const Home = () => {
                         </div>
 
                         <div className="d-flex gap-5 justify-content-center flex-wrap">
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            <SaleProduct />
-                            {/* <SaleProduct /> */}
+                            <BestSellingProductsProducts />
                         </div>
 
                         <div className="d-flex justify-content-center">

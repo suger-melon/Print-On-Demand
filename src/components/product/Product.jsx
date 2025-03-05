@@ -3,6 +3,8 @@ import './styles.scss'
 
 // page import
 import SaleProduct from "../saleProduct/SaleProduct";
+import BestSellingProduct from "../bestSellingProduct/BestSellingProduct";
+import CartProduct from "../cartProduct/CartProduct";
 
 // impages import
 
@@ -71,7 +73,7 @@ const FlashSales = [
     }
 ]
 
-const BestSellingProduct = [
+const BestSellingProducts = [
     {
         id: 1,
         image: bs1,
@@ -117,6 +119,8 @@ const ExploreOurProducts = [
         image: product1,
         name: "Breed Dry Dog Food",
         price: 100,
+        originalPrice: 220,
+        discount: 120,
         rating: 3,
         reviews: 35
     }, 
@@ -125,6 +129,8 @@ const ExploreOurProducts = [
         image: product2,
         name: "CANON EOS DSLR Camera",
         price: 360,
+        originalPrice: 400,
+        discount: 40,
         rating: 4,
         reviews: 95
     },
@@ -133,6 +139,8 @@ const ExploreOurProducts = [
         image: product3,
         name: "ASUS FHD Gaming Laptop",
         price: 700,
+        originalPrice: 750,
+        discount: 50,
         rating: 5,
         reviews: 325
     },
@@ -141,6 +149,8 @@ const ExploreOurProducts = [
         image: product4,
         name: "Curology Product Set ",
         price: 500,
+        originalPrice: 520,
+        discount: 20,
         rating: 4,
         reviews: 145
     },
@@ -149,6 +159,8 @@ const ExploreOurProducts = [
         image: product5,
         name: "Kids Electric Car",
         price: 960,
+        originalPrice: 1000,
+        discount: 40,
         rating: 5,
         reviews: 65
     }, 
@@ -157,6 +169,8 @@ const ExploreOurProducts = [
         image: product6,
         name: "Jr. Zoom Soccer Cleats",
         price: 1160,
+        originalPrice: 1360,
+        discount: 200,
         rating: 5,
         reviews: 35
     },
@@ -165,6 +179,8 @@ const ExploreOurProducts = [
         image: product7,
         name: "GP11 Shooter USB Gamepad",
         price: 660,
+        originalPrice: 710,
+        discount: 70,
         rating: 4.5,
         reviews: 55
     },
@@ -173,21 +189,67 @@ const ExploreOurProducts = [
         image: product8,
         name: "Quilted Satin Jacket",
         price: 660,
+        originalPrice: 710,
+        discount: 70,
         rating: 4.5,
         reviews: 55
     } 
 ]
 
-const Product = () => {
+export const FlashSalesProduct = () => {
     return(
         <>
-            <div className="product-container">
+            {/* <div className="product-container"> */}
                 {
                     FlashSales.map(product => (
                         <SaleProduct key={product.id} product={product}  />
                     ))
                 }
-            </div>
+            {/* </div> */}
+        </>
+    )
+}
+
+
+export const BestSellingProductsProducts = () => {
+    return(
+        <>
+            {/* <div className="product-container"> */}
+                {
+                    BestSellingProducts.map(product => (
+                        <BestSellingProduct key={product.id} product={product}  />
+                    ))
+                }
+            {/* </div> */}
+        </>
+    )
+}
+
+
+export const ExploreOurProductsProducts = () => {
+    return(
+        <>
+            {/* <div className="product-container"> */}
+                {
+                    ExploreOurProducts.map(product => (
+                        <CartProduct key={product.id} product={product}  />
+                    ))
+                }
+            {/* </div> */}
+        </>
+    )
+}
+
+const Product = () => {
+    return(
+        <>
+            {/* <div className="product-container"> */}
+                {
+                    ExploreOurProducts.map(product => (
+                        <CartProduct key={product.id} product={product}  />
+                    ))
+                }
+            {/* </div> */}
         </>
     )
 }
