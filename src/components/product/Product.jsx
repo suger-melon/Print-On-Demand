@@ -12,7 +12,23 @@ import sale2 from "./../../assets/products/sale2.png"
 import sale3 from "./../../assets/products/sale3.png"
 import sale4 from "./../../assets/products/sale4.png"
 
-const ProductList = [
+// best selling product
+import bs1 from "./../../assets/products/bsproduct1.png"
+import bs2 from "./../../assets/products/bsproduct2.png"
+import bs3 from "./../../assets/products/bsproduct3.png"
+import bs4 from "./../../assets/products/bsproduct4.png"
+
+// explore our products
+import product1 from './../../assets/products/product1.png'
+import product2 from './../../assets/products/product2.png'
+import product3 from './../../assets/products/product3.png'
+import product4 from './../../assets/products/product4.png'
+import product5 from './../../assets/products/product5.png'
+import product6 from './../../assets/products/product6.png'
+import product7 from './../../assets/products/product7.png'
+import product8 from './../../assets/products/product8.png'
+
+const FlashSales = [
     {
         id: 1,
         image: sale1,
@@ -55,12 +71,119 @@ const ProductList = [
     }
 ]
 
+const BestSellingProduct = [
+    {
+        id: 1,
+        image: bs1,
+        name: "The north coat",
+        price: 260,
+        originalPrice: 360,
+        rating: 5,
+        reviews: 65
+    }, 
+    {
+        id: 2,
+        image: bs2,
+        name: "Gucci duffle bag",
+        price: 960,
+        originalPrice: 1160,
+        rating: 4.5,
+        reviews: 65
+    },
+    {
+        id: 3,
+        image: bs3,
+        name: "RGB liquid CPU Cooler",
+        price: 160,
+        originalPrice: 170,
+        rating: 4.5,
+        reviews: 65
+    },
+    {
+        id: 4,
+        image: bs4,
+        name: "Small BookSelf",
+        price: 360,
+        originalPrice: 400,
+        rating: 5,
+        reviews: 65
+    } 
+]
+
+
+const ExploreOurProducts = [
+    {
+        id: 1,
+        image: product1,
+        name: "Breed Dry Dog Food",
+        price: 100,
+        rating: 3,
+        reviews: 35
+    }, 
+    {
+        id: 2,
+        image: product2,
+        name: "CANON EOS DSLR Camera",
+        price: 360,
+        rating: 4,
+        reviews: 95
+    },
+    {
+        id: 3,
+        image: product3,
+        name: "ASUS FHD Gaming Laptop",
+        price: 700,
+        rating: 5,
+        reviews: 325
+    },
+    {
+        id: 4,
+        image: product4,
+        name: "Curology Product Set ",
+        price: 500,
+        rating: 4,
+        reviews: 145
+    },
+    {
+        id: 5,
+        image: product5,
+        name: "Kids Electric Car",
+        price: 960,
+        rating: 5,
+        reviews: 65
+    }, 
+    {
+        id: 6,
+        image: product6,
+        name: "Jr. Zoom Soccer Cleats",
+        price: 1160,
+        rating: 5,
+        reviews: 35
+    },
+    {
+        id: 7,
+        image: product7,
+        name: "GP11 Shooter USB Gamepad",
+        price: 660,
+        rating: 4.5,
+        reviews: 55
+    },
+    {
+        id: 8,
+        image: product8,
+        name: "Quilted Satin Jacket",
+        price: 660,
+        rating: 4.5,
+        reviews: 55
+    } 
+]
+
 const Product = () => {
     return(
         <>
             <div className="product-container">
                 {
-                    ProductList.map(product => (
+                    FlashSales.map(product => (
                         <SaleProduct key={product.id} product={product}  />
                     ))
                 }
