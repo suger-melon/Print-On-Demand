@@ -22,8 +22,6 @@ const SaleProduct = ({ product }) => {
         if(hasHalfStar) star.push(<img key="half" src={halfStart} alt="star" />)
         for(let i=0; i<emptyStar; i++) star.push(<img key={`empty-${i}`} src={emptyStart} alt="star" />)
 
-        console.log(name)
-
         return star
     }
 
