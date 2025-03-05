@@ -34,7 +34,7 @@ const SaleProduct = ({ product }) => {
                     </div>
                     <div className="d-flex justify-content-between">
                         <div className="percentage">
-                            {discount}
+                            {discount}%
                         </div>
                         <div className="image-icon-parent">
                             <div className="image-icon">
