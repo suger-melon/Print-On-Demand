@@ -9,16 +9,15 @@ import Error from "../pages/error/Error";
 import Contact from "../pages/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Product from "../components/product/Product";
-import SaleProduct from "../components/saleProduct/SaleProduct";
-import BestSellingProduct from "../components/bestSellingProduct/BestSellingProduct";
-import NewProduct from "../components/newProduct/NewProduct";
-import CartProduct from "../components/cartProduct/CartProduct";
+import About from "../pages/about/About";
 
 function AppRoute() {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Product />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/wishlist" element={<Home />} />
                 <Route path="/footer" element={<Footer />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
