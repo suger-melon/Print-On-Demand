@@ -8,9 +8,9 @@ import Signup from "../pages/signup/Signup";
 import Error from "../pages/error/Error";
 import Contact from "../pages/contact/Contact";
 import Footer from "../components/footer/Footer";
-import Product from "../components/product/Product";
+// import Product from "../components/product/Product";
 import About from "../pages/about/About";
-import ProductInfo from "../pages/product-info/ProductInfo";
+// import ProductInfo from "../pages/product-info/ProductInfo";
 
 function AppRoute() {
     return(
