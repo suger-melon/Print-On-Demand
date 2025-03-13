@@ -1,5 +1,5 @@
 // React DOM imports
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // Pages import
 import Home from "../pages/home/Home";
@@ -10,18 +10,19 @@ import Contact from "../pages/contact/Contact";
 import Footer from "../components/footer/Footer";
 import Product from "../components/product/Product";
 import About from "../pages/about/About";
+import ProductInfo from "../pages/product-info/ProductInfo";
 
 function AppRoute() {
     return(
         <Router>
             <Routes>
-                <Route path="/" element={<Product />} />
+                <Route path="/" element={<Navigate to="/home" />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/wishlist" element={<Home />} />
                 <Route path="/footer" element={<Footer />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/home" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
 
                 <Route path="*" element={<Error />} />
